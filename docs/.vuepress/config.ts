@@ -178,7 +178,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
 
     // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
-    // 'fulltext-search',
+    "fulltext-search",
 
     // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
     [
@@ -272,6 +272,92 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
+
+    [
+      "ribbon",
+      {
+        size: 90, // 彩带的宽度，默认为 90
+        opacity: 0.3, // 彩带的不透明度，默认为 0.3
+        zIndex: -1, // 彩带的 z-index 属性，默认值为 -1
+      },
+    ],
+
+    [
+      "dynamic-title",
+      {
+        showIcon: "img/favicon.ico",
+        showText: "(/≧▽≦/)咦！又好了！",
+        hideIcon: "img/failure.ico",
+        hideText: "(●—●)喔哟，崩溃啦！",
+        recoverTime: 2000,
+      },
+    ],
+
+    [
+      "cursor-effects",
+      {
+        size: 2, // 粒子大小
+        shape: "star", // 粒子形状（可选 'star' 和 'circle'）
+        zIndex: 999999999,
+      },
+    ],
+
+    // "go-top", // 重复冲突
+
+    ["vuepress-plugin-code-copy", true],
+
+    "reading-progress",
+
+    [
+      "copyright",
+      {
+        authorName: "LYJ", // 选中的文字将无法被复制
+        minLength: 66, // 如果长度超过  30 个字符
+      },
+    ],
+
+    "tabs",
+
+    "seo",
+
+    [
+      "vuepress-plugin-helper-live2d",
+      {
+        // 是否开启控制台日志打印(default: false)
+        log: false,
+        live2d: {
+          // 是否启用(关闭请设置为false)(default: true)
+          enable: true,
+          // 模型名称(default: hibiki)>>>取值请参考：
+          // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
+          model: "tororo",
+          display: {
+            position: "left", // 显示位置：left/right(default: 'right')
+            width: 135, // 模型的长度(default: 135)
+            height: 300, // 模型的高度(default: 300)
+            hOffset: 65, //  水平偏移(default: 65)
+            vOffset: 0, //  垂直偏移(default: 0)
+          },
+          mobile: {
+            show: false, // 是否在移动设备上显示(default: false)
+          },
+          react: {
+            opacity: 0.77, // 模型透明度(default: 0.8)
+          },
+        },
+      },
+    ],
+
+    // [
+    //   "meting",
+    //   {
+    //     metingApi,
+    //     meting,
+    //     aplayer,
+    //     mobile,
+    //     defaultCover,
+    //   },
+    // ],
   ],
 
   markdown: {
