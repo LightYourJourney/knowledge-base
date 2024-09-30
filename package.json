@@ -16,7 +16,7 @@
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.16",
     "dayjs": "^1.9.7",
-    "inquirer": "^11.0.2",
+    "inquirer": "^11.1.0",
     "json2yaml": "^1.1.0",
     "vuepress": "1.9.10",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
